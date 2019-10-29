@@ -1,0 +1,15 @@
+{
+  "main": "launch.js",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "glob": "^7.1.5"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "start": "node launch.js",
+    "test": "node test.js",
+    "format": "prettier **/*.js --write"
+  }
+}
