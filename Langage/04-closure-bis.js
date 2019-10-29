@@ -10,7 +10,7 @@ function externe(msg) {
 }
 
 const hello = externe('Hello');
-const bye = externe('bye');
+const bye = externe('Bye');
 hello();
 bye();
 bye();

@@ -19,7 +19,10 @@ console.log(Math.sum); // undefined
 console.log(Math.PI);
 console.log(Math['PI']);
 const key = 'PI';
-console.log(Math[key]);
+const method = 'error';
+console[method](Math[key]);
+
+global['parseInt']('123 abc');
 
 // Créer un objet : 2 possibilités
 
@@ -60,8 +63,11 @@ class Coords {
 
 console.log(typeof Coords); // function
 
+// Object.defineProperty(Coords.prototype, 'getY', {
+//   value: function() { return this._y; },
+//   enumerable: false,
+// })
 Coords.prototype.getY = function() { return this._y; };
-
 
 const coordsA = new Coords(1, 2);
 const coordsB = new Coords(3, 4);
@@ -69,5 +75,16 @@ console.log(typeof coordsA); // obj
 console.log(coordsA._x); // 1
 console.log(coordsA.getX()); // 1
 
+console.log(coordsA._x !== undefined); // true
+console.log(coordsA.getX !== undefined); // true
+console.log(coordsA.hasOwnProperty('_x')); // true
+console.log(coordsA.hasOwnProperty('getX')); // false
+
 console.log(coordsA.getX === coordsB.getX); // true
+
+for (const key in coordsA) {
+  if (coordsA.hasOwnProperty(key)) {
+    console.log(key); // _x, _y
+  }
+}
 

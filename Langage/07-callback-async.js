@@ -1,7 +1,7 @@
 setTimeout(() => console.log('A'), 500);
 setTimeout(() => console.log('B'), 1000);
 setTimeout(() => console.log('C'), 0);
-setTimeout(() => console.log('D'), 500);
+setTimeout((letter) => console.log(letter), 500, 'D');
 
 console.log('FIN');
 

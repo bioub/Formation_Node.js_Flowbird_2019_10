@@ -13,6 +13,17 @@ nbs.filter((nb) => nb % 2 === 0)
    .map((nbPair) => nbPair ** 2)
    .forEach((square) => console.log(square));
 
+
+function setTimeoutSync(cb, delayMs) {
+  const debut = Date.now();
+  while (Date.now() < debut + delayMs);
+  cb(delayMs);
+}
+
+setTimeoutSync((d) => {
+  console.log(d + 'ms');
+}, 1000);
+
 console.log('FIN');
 
 // pile d'appels
