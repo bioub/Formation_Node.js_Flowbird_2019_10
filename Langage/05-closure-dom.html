@@ -11,8 +11,9 @@
     function createButton(value) {
       const btn = document.createElement('button');
       btn.innerText = value;
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (event) => {
         console.log(value);
+        console.log(event.target); // this (sans arrow)
       });
       document.body.appendChild(btn);
     }

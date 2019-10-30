@@ -39,7 +39,7 @@ const clone = [1, ...nbs, 6];
 // list($prenom, $nom) = $fullName;
 
 //    [   2,     3, 4, 5]
-const [deux, troix] = nbs;
+const [deux, trois] = nbs;
 
 const [two, three = 3] = nbs;
 const [   , dos, ...otros] = nbs;
@@ -47,12 +47,12 @@ const [   , dos, ...otros] = nbs;
 // aussi sur des objets
 const coords = {x: 1, y: 2};
 //       {x: 1   , y: 2}
-// const {x: varX, y: varX} = coords;
+// const {x: varX, y: varY} = coords;
 // const {x: x   , y: y} = coords;
 
 const {x, y} = coords;
 
-// REST / SPREAD sur un objet (ES8+)
+// REST / SPREAD sur un objet (ES9+)
 const clone = {...coords};
 const coords3d = {...coords, z: 3};
 

@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node launch.js",
     "test": "node test.js",
-    "format": "prettier **/*.js --write"
+    "format": "prettier **/*.js --write",
+    "start:esm": "node --experimental-modules ex-jeu-mjs/index.mjs"
   }
 }
