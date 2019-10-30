@@ -67,3 +67,18 @@ console.log('FIN');
 //   const buffer = await fs.promises.readFile(editorConfigPath);
 //   console.log(buffer.toString());
 // }
+
+
+// function readFile(path, content) {
+//   return new Promise((resolve, reject) => {
+//     fs.readFile(path, content, (err, buffer) => {
+//       if (err) {
+//         return reject(err);
+//       }
+//       resolve(buffer);
+//     });
+//   })
+// }
+
+// const { promisify } = require('util');
+// const readFile = promisify(fs.readFile);

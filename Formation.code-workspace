@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "Langage",
+			"path": "Langage"
+		},
+		{
+			"name": "CommonJS",
+			"path": "CommonJS"
+		},
+		{
+			"name": "NodeCLI",
+			"path": "NodeCLI"
+		},
+		{
+			"name": "Exercice-Build",
+			"path": "Exercice-Build"
+		},
+		{
+			"name": "Webpack",
+			"path": "Webpack"
+		},
+		{
+			"name": "NodeWeb",
+			"path": "NodeWeb"
+		}
+	],
+	"settings": {}
+}
