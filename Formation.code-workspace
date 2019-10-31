@@ -23,6 +23,12 @@
 		{
 			"name": "NodeWeb",
 			"path": "NodeWeb"
+		},
+		{
+			"path": "ExpressHTML"
+		},
+		{
+			"path": "ExpressREST"
 		}
 	],
 	"settings": {}

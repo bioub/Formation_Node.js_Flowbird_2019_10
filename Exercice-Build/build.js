@@ -23,7 +23,7 @@ async function buildJs() {
     fs.readFile(indexJsPath, { encoding: 'utf-8' }),
   ]);
 
-  const js = argv.minify ? Terser.minify(contents).code : contents;
+  const js = argv.minify ? Terser.minify(contents).code : contents.join('');
   const hash = md5(js);
 
   const {dir, name, ext} = path.parse(appJsDistPath);

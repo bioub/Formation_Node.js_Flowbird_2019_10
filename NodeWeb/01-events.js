@@ -5,8 +5,14 @@ const events = new EventEmitter();
 
 function createUser(name) {
   // TODO INSERT IN DB
-  events.emit('user.created', name);
+  process.nextTick(() => {
+    events.emit('user.created', name);
+  });
 }
+
+events.once('user.created', (name) => {
+  console.log(`${name} user created (once)`);
+});
 
 events.on('user.created', (name) => {
   console.log(`${name} user created`);
@@ -14,3 +20,5 @@ events.on('user.created', (name) => {
 
 createUser('Romain');
 createUser('Jean');
+
+console.log('FIN');

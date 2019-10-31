@@ -37,6 +37,12 @@ fs.readFile(editorConfigPath, (err, buffer) => {
   }
 });
 
+// ^
+// |
+// |                writeFile         lg
+// |readFile ...... =>        ....... =>
+// +--------------------------------------------->
+
 // Asynchrone (style basé sur les promesses / Promise)
 // Performant, mais un peu plus simple à écrire
 // Promise, normé en ES6
